@@ -62,21 +62,10 @@
     --chart-5: 340 75% 55%;
   }
 }
-/* 
-@layer base {
-  * {
-    @apply border; 
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-} */
-
 
 /* Font */
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* TypoGraphy */
@@ -98,23 +87,19 @@ h2 {
 
 p {
   font-size: clamp(1.2rem, 2vw, 1rem);
-  /* color: rgb(99, 105, 131); */
   color: rgba(255, 255, 255, 0.815);
   font-weight: 300;
   letter-spacing: 0.5px;
-  /* -webkit-text-stroke: 1%; */
   line-height: 20px;
 }
 
 .glassEffect {
   background: rgba(255, 255, 255, 3%);
-  /* border-radius: 16px; */
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.068);
   backdrop-filter: blur(10.1px);
   -webkit-backdrop-filter: blur(10.1px);
   border: 1px solid rgba(255, 255, 255, 0);
 }
-
 
 /* ScrollBar Start */
 ::-webkit-scrollbar {
@@ -137,3 +122,78 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.bg-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent overlay color */
+  animation: blink 2s infinite;
+  /* Blinking effect with a duration of 2 seconds */
+}
+
+
+
+.heart-rate{
+	width: 150px;
+	height: 73px;
+	position: relative;
+	margin: 20px auto;
+}
+
+.fade-in{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #000;
+top: 0;
+right: 0;
+animation: heartRateIn 2.5s linear infinite;
+}
+
+.fade-out{
+position: absolute;
+width: 120%;
+height: 100%;
+background-color: #000;
+top: 0;
+right: -120%;
+animation: heartRateOut 2.5s linear infinite;
+background: rgba(0, 0, 0, 1);
+background: linear-gradient(to right,rgba(0,0,0,1)0%, rgba(0,0,0,1)80%,rgba(0,0,0,0)100%);
+}
+
+@keyframes heartRateIn{
+	0%{
+		width: 100%;
+	}
+	50%{
+		width: 0;
+	}
+	100%{
+		width: 0;
+	}
+}
+@keyframes heartRateOut{
+	0%{
+		left: -120%;
+	}
+	30%{
+		left: -120%;
+	}
+	100%{
+		left: 0;
+	}
+
+}
