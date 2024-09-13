@@ -86,11 +86,11 @@ h2 {
 }
 
 p {
-  font-size: clamp(1.2rem, 2vw, 1rem);
-  color: rgba(255, 255, 255, 0.815);
+  font-size: clamp(1rem, 2vw, 1rem);
+  color: white;
   font-weight: 300;
-  letter-spacing: 0.5px;
-  line-height: 20px;
+  letter-spacing: 0.9px;
+  line-height: 25px;
 }
 
 .glassEffect {
@@ -143,57 +143,79 @@ input::-webkit-inner-spin-button {
   /* Blinking effect with a duration of 2 seconds */
 }
 
-
-
-.heart-rate{
-	width: 150px;
-	height: 73px;
-	position: relative;
-	margin: 20px auto;
+/* styles/globals.css */
+.perspective {
+  perspective: 1000px;
 }
 
-.fade-in{
-position: absolute;
-width: 100%;
-height: 100%;
-background-color: #000;
-top: 0;
-right: 0;
-animation: heartRateIn 2.5s linear infinite;
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
 }
 
-.fade-out{
-position: absolute;
-width: 120%;
-height: 100%;
-background-color: #000;
-top: 0;
-right: -120%;
-animation: heartRateOut 2.5s linear infinite;
-background: rgba(0, 0, 0, 1);
-background: linear-gradient(to right,rgba(0,0,0,1)0%, rgba(0,0,0,1)80%,rgba(0,0,0,0)100%);
+.backface-hidden {
+  backface-visibility: hidden;
 }
 
-@keyframes heartRateIn{
-	0%{
-		width: 100%;
-	}
-	50%{
-		width: 0;
-	}
-	100%{
-		width: 0;
-	}
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }
-@keyframes heartRateOut{
-	0%{
-		left: -120%;
-	}
-	30%{
-		left: -120%;
-	}
-	100%{
-		left: 0;
-	}
+
+.heart-rate {
+  width: 150px;
+  height: 73px;
+  position: relative;
+  margin: 20px auto;
+}
+
+.fade-in {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  top: 0;
+  right: 0;
+  animation: heartRateIn 2.5s linear infinite;
+}
+
+.fade-out {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  background-color: #000;
+  top: 0;
+  right: -120%;
+  animation: heartRateOut 2.5s linear infinite;
+  background: rgba(0, 0, 0, 1);
+  background: linear-gradient(to right, rgba(0, 0, 0, 1)0%, rgba(0, 0, 0, 1)80%, rgba(0, 0, 0, 0)100%);
+}
+
+@keyframes heartRateIn {
+  0% {
+    width: 100%;
+  }
+
+  50% {
+    width: 0;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes heartRateOut {
+  0% {
+    left: -120%;
+  }
+
+  30% {
+    left: -120%;
+  }
+
+  100% {
+    left: 0;
+  }
 
 }
+
+
