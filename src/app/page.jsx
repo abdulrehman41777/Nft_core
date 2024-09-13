@@ -56,24 +56,28 @@ export default function Home() {
       }
     );
   }, []);
+  // const flipBoxRef = useRef(null);
 
-  useEffect(() => {
-    const flipBox = document.querySelector(`.${styles.flipCardInner}`);
-    flipBox.addEventListener("mouseenter", () => {
-      gsap.to(flipBox, {
-        duration: 0.5,
-        rotationY: 180,
-        ease: "power2.out",
-      });
-    });
-    flipBox.addEventListener("mouseleave", () => {
-      gsap.to(flipBox, {
-        duration: 0.5,
-        rotationY: 0,
-        ease: "power2.out",
-      });
-    });
-  }, []);
+  // useEffect(() => {
+  //   const flipBox = flipBoxRef.current;
+
+  //   // GSAP Flip Animation
+  //   flipBox.addEventListener('mouseenter', () => {
+  //     gsap.to(flipBox, {
+  //       rotateY: 180,
+  //       duration: 0.6,
+  //       ease: 'power3.inOut',
+  //     });
+  //   });
+
+  //   flipBox.addEventListener('mouseleave', () => {
+  //     gsap.to(flipBox, {
+  //       rotateY: 0,
+  //       duration: 0.6,
+  //       ease: 'power3.inOut',
+  //     });
+  //   });
+  // }, []);
 
   return (
     <div
@@ -423,104 +427,28 @@ export default function Home() {
               The largest and unique Super rare NFT marketplace for crypto-collectibles
             </p>
 
-            <div className="flex flex-wrap justify-center">
-              {/* Flip Card 1 */}
-              <div className={styles.flipCard}>
-                <div className={styles.flipCardInner}>
-                  <div className={styles.flipCardFront}>
-                    <img
-                      src="card01.png" // Update with the correct path to your image
-                      alt="Artwork"
-                      className={styles.cardImage}
-                    />
-                    <div className={styles.overlayInfo}>
-                      <p>Current bid</p>
-                      <h4>3.2 ETH</h4>
-                    </div>
-                  </div>
-                  <div className={styles.flipCardBack}>
-                    <h2>Bid on Artwork</h2>
-                    <button className={styles.bidButton}>Place bid</button>
-                  </div>
-                </div>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
+              {/* Card 1 */}
 
-              {/* Flip Card 2 */}
-              <div className={`${styles.flipBox} ${styles.alternative}`}>
-                <div className={styles.object}>
-                  <div className={styles.front}>
-                    <div className={styles.flipContent}>
-                      <div className={styles.frontBox}>
-                        <h1>Your Must Haves</h1>
-                        <h4>APARTMENT FEATURES</h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={`${styles.back} ${styles.flipBack}`}>
-                    <div className={styles.backOpacity}>
-                      <div className={styles.flipContent}>
-                        <div className={styles.backBox}>
-                          <h6>Your Must Haves</h6>
-                          <h2>APARTMENT FEATURES</h2>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua.
-                          </p>
-                          <div className={styles.fpButtonPad}>
-                            <a
-                              className={styles.miniOButton}
-                              href="/apartment-features/"
-                            >
-                              Features
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.flank}></div>
-                  </div>
-                </div>
-              </div>
+              {/* <div className="flex justify-center items-center min-h-screen bg-gray-100"> */}
 
-              {/* Flip Card 3 */}
-              <div className={`${styles.flipBox} ${styles.alternative}`}>
-                <div className={styles.object}>
-                  <div className={styles.front}>
-                    <div className={styles.flipContent}>
-                      <div className={styles.frontBox}>
-                        <h1>Studios to Townhomes</h1>
-                        <h4>CHOOSE YOUR FLOORPLAN</h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div className={`${styles.back} ${styles.flipBack}`}>
-                    <div className={styles.backOpacity}>
-                      <div className={styles.flipContent}>
-                        <div className={styles.backBox}>
-                          <h6>Studios to Townhomes</h6>
-                          <h2>CHOOSE YOUR FLOORPLAN</h2>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua.
-                          </p>
-                          <div className={styles.fpButtonPad}>
-                            <a className={styles.miniOButton} href="/floorplans/">
-                              Floorplans
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className={styles.flank}></div>
-                  </div>
+              <div className="w-64 h-64 perspective-1000" >
+                {/* Flip Box */}
+
                 </div>
+
+                {/* </div> */}
+
+
+                {/* Card 2 */}
+
+
+                {/* Card 3 */}
+
               </div>
 
 
             </div>
-          </div>
 
         </section>
 
