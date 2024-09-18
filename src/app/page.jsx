@@ -320,7 +320,7 @@ export default function Home() {
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
           }}>
-          <div class="border-2 border-yellow-500 bg-gradient-to-r text-white  py-10 lg:py-20 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between space-y-8 lg:space-y-0"
+          <div className="border-2 border-yellow-500 bg-gradient-to-r text-white  py-10 lg:py-20 flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between space-y-8 lg:space-y-0"
 
             style={{
               background: 'rgba(255, 255, 255, 0.04 )',
@@ -359,12 +359,12 @@ export default function Home() {
                   <img
                     src="vector2.png"
                     alt="Why Choose Us Image 1"
-                    class=" rotate-6  absolute top-0 left-1/2 transform -translate-x-1/2"
+                    className=" rotate-6  absolute top-0 left-1/2 transform -translate-x-1/2"
                   />
                   <img
                     src="why_choose.png"
                     alt="Why Choose Us Image 2"
-                    class="rounded-lg  -rotate-6 hover:rotate-0 transition duration-300 absolute top-0 left-1/2 transform -translate-x-2/4"
+                    className="rounded-lg  -rotate-6 hover:rotate-0 transition duration-300 absolute top-0 left-1/2 transform -translate-x-2/4"
                   />
                 </div>
               </div>
@@ -759,38 +759,38 @@ export default function Home() {
         >
 
 
-          <div class="max-w-7xl mx-auto p-6">
+          <div className="max-w-7xl mx-auto p-6">
             <h2 className="text-center text-white text-3xl mb-8">Top Collection</h2>
             <p className="text-center text-white mb-12">
               The largest and unique Super rare NFT marketplace<br /> for crypto-collectibles
             </p>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-              <div class="bg--[#3B82F6] hover:hover:bg-[#080B2A]   p-4 rounded-lg shadow-lg flex flex-col items-start  text-start  transition duration-300 ease-in-out border hover:text-white"
+              <div className="bg--[#3B82F6] hover:hover:bg-[#080B2A]   p-4 rounded-lg shadow-lg flex flex-col items-start  text-start  transition duration-300 ease-in-out border hover:text-white"
 
               >
-                <img src="./collection01.png" alt="Art Image 1" class="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-90" />
+                <img src="./collection01.png" alt="Art Image 1" className="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-90" />
 
-                <h3 class="text-white text-xl font-semibold text-start">Punk Art Collection</h3>
-                <p class="text-[gray-400]">Curated by <span class="underline hover:text-white ">Jenna Watson</span></p>
+                <h3 className="text-white text-xl font-semibold text-start">Punk Art Collection</h3>
+                <p className="text-[gray-400]">Curated by <span className="underline hover:text-white ">Jenna Watson</span></p>
               </div>
 
-              <div class="bg--[#3B82F6] hover:hover:bg-[#080B2A]   p-4 rounded-lg shadow-lg flex flex-col items-start  text-start  transition duration-300 ease-in-out border hover:text-white">
-                <img src="./collection03.png" alt="Art Image 1" class="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-90" />
+              <div className="bg--[#3B82F6] hover:hover:bg-[#080B2A]   p-4 rounded-lg shadow-lg flex flex-col items-start  text-start  transition duration-300 ease-in-out border hover:text-white">
+                <img src="./collection03.png" alt="Art Image 1" className="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-90" />
 
-                <h3 class="text-white text-xl font-semibold text-start">Punk Art Collection</h3>
-                <p class="text-[gray-400]">Curated by <span class="underline hover:text-white ">Jenna Watson</span></p>
+                <h3 className="text-white text-xl font-semibold text-start">Punk Art Collection</h3>
+                <p className="text-[gray-400]">Curated by <span className="underline hover:text-white ">Jenna Watson</span></p>
               </div>
-              <div class="bg--[#3B82F6] hover:hover:bg-[#080B2A]   p-4 rounded-lg shadow-lg flex flex-col items-start  text-start  transition duration-300 ease-in-out border hover:text-white">
-                <img src="./collection02.png" alt="Art Image 1" class="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-90" />
+              <div className="bg--[#3B82F6] hover:hover:bg-[#080B2A]   p-4 rounded-lg shadow-lg flex flex-col items-start  text-start  transition duration-300 ease-in-out border hover:text-white">
+                <img src="./collection02.png" alt="Art Image 1" className="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-90" />
 
-                <h3 class="text-white text-xl font-semibold text-start">Punk Art Collection</h3>
-                <p class="text-[gray-400]">Curated by <span class="underline hover:text-white ">Jenna Watson</span></p>
+                <h3 className="text-white text-xl font-semibold text-start">Punk Art Collection</h3>
+                <p className="text-[gray-400]">Curated by <span className="underline hover:text-white ">Jenna Watson</span></p>
               </div>
             </div>
 
-            <div class="flex justify-center mt-8">
+            <div className="flex justify-center mt-8">
               <button className="hover:bg-[#15BFFD] hover:text-white text-[#15BFFD] px-10 py-3 rounded-full border border-[#15BFFD]">
                 Explore More
               </button>
@@ -803,8 +803,13 @@ export default function Home() {
             backgroundImage: "url('./collectionbg.png')",
           }}
         >
-          <div class="bg--[#0e112a]  flex justify-center items-center p-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-center text-white text-3xl mb-8">Top Collection</h2>
+          <p className="text-center text-white mb-12">
+            The largest and unique Super rare NFT marketplace<br /> for crypto-collectibles
+          </p>
+          <div className="bg--[#0e112a]  flex justify-center items-center p-6">
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
               {/* <div
                 className="relative border-2 border-red-400 overflow-hidden p-4 rounded-lg flex items-center polygon0--border justify-between shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -833,8 +838,17 @@ export default function Home() {
               </div> */}
 
 
-              <div className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="absolute inset-0 -z-10 border-4 border-transparent rounded-lg polygon-border" />
+              <div
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0 0, 100% 1%, 100% 69%, 75% 100%, 0 100%, 0% 50%)",
+                  border: "linear-gradient(90deg, #00b5ff, #9747ff);"
+                }}
+                className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 bg-transparent rounded-lg clip-path-border" />
                 <div className="flex items-center space-x-4 relative">
                   <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
                   <div className="flex flex-col">
@@ -850,25 +864,198 @@ export default function Home() {
               </div>
 
 
-              <div class="bg-[#1b1f3b] p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition">
-                <div class="flex items-center">
-                  <img src="avatar2.jpg" alt="Avatar" class="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <h4 class="text-white font-semibold">Emerson Phillips</h4>
-                    <p class="text-blue-300 text-sm"><i class="fa fa-ethereum"></i> 3.2 ETH</p>
+
+              <div
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0 0, 100% 1%, 100% 69%, 75% 100%, 0 100%, 0% 50%)",
+                  border: "linear-gradient(90deg, #00b5ff, #9747ff);"
+                }}
+                className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 bg-transparent rounded-lg clip-path-border" />
+                <div className="flex items-center space-x-4 relative">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
                   </div>
                 </div>
-                <button class="bg-transparent border border-blue-500 text-blue-500 px-4 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300">Follow</button>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
               </div>
-              <div class="bg-[#1b1f3b] p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition">
-                <div class="flex items-center">
-                  <img src="avatar2.jpg" alt="Avatar" class="w-12 h-12 rounded-full mr-4" />
-                  <div>
-                    <h4 class="text-white font-semibold">Emerson Phillips</h4>
-                    <p class="text-blue-300 text-sm"><i class="fa fa-ethereum"></i> 3.2 ETH</p>
+              <div
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0 0, 100% 1%, 100% 69%, 75% 100%, 0 100%, 0% 50%);",
+                  border: "linear-gradient(90deg, #00b5ff, #9747ff);"
+                }}
+                className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 bg-transparent rounded-lg clip-path-border" />
+                <div className="flex items-center space-x-4 relative">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
                   </div>
                 </div>
-                <button class="bg-transparent border border-blue-500 text-blue-500 px-4 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300">Follow</button>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
+              </div>
+              <div
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0 0, 100% 1%, 100% 69%, 75% 100%, 0 100%, 0% 50%)",
+                  border: "linear-gradient(90deg, #00b5ff, #9747ff);"
+                }}
+                className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 bg-transparent rounded-lg clip-path-border" />
+                <div className="flex items-center space-x-4 relative">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
+                  </div>
+                </div>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
+              </div>
+              <div
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0 0, 100% 1%, 100% 69%, 75% 100%, 0 100%, 0% 50%);",
+                  border: "linear-gradient(90deg, #00b5ff, #9747ff);"
+                }}
+                className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 bg-transparent rounded-lg clip-path-border" />
+                <div className="flex items-center space-x-4 relative">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
+                  </div>
+                </div>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
+              </div>
+              <div
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0 0, 100% 1%, 100% 69%, 75% 100%, 0 100%, 0% 50%)",
+                  border: "linear-gradient(90deg, #00b5ff, #9747ff);"
+                }}
+                className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 bg-transparent rounded-lg clip-path-border" />
+                <div className="flex items-center space-x-4 relative">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
+                  </div>
+                </div>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
+              </div>
+              <div
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0 0, 100% 1%, 100% 69%, 75% 100%, 0 100%, 0% 50%)",
+                  border: "linear-gradient(90deg, #00b5ff, #9747ff);"
+                }}
+                className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 bg-transparent rounded-lg clip-path-border" />
+                <div className="flex items-center space-x-4 relative">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
+                  </div>
+                </div>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
+              </div>
+              <div
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0 0, 100% 1%, 100% 69%, 75% 100%, 0 100%, 0% 50%)",
+                  border: "linear-gradient(90deg, #00b5ff, #9747ff);"
+                }}
+                className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 bg-transparent rounded-lg clip-path-border" />
+                <div className="flex items-center space-x-4 relative">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
+                  </div>
+                </div>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
+              </div>
+              <div
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0 0, 100% 1%, 100% 69%, 75% 100%, 0 100%, 0% 50%)",
+                  border: "linear-gradient(90deg, #00b5ff, #9747ff);"
+                }}
+                className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 bg-transparent rounded-lg clip-path-border" />
+                <div className="flex items-center space-x-4 relative">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
+                  </div>
+                </div>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
               </div>
 
             </div>
@@ -876,6 +1063,97 @@ export default function Home() {
 
 
         </section>
+
+        <footer
+          className="relative border-2 border-red-500 text-white py--14 h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('./footerbg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+
+          }}
+        >
+          <div className="border-4 border-[yellow] py-20"
+
+            style={{
+              background: 'rgba(255, 255, 255, 0.04 )',
+              boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+              backdropFilter: 'blur(2.4px)',
+              WebkitBackdropFilter: 'blur(2.4px)',
+
+            }}
+          >
+            <div className="border container mx-auto px-4"
+
+            // style={{
+            //   background: 'rgba(255, 255, 255, 0.04 )',
+            //   boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+            //   backdropFilter: 'blur(2.4px)',
+            //   WebkitBackdropFilter: 'blur(2.4px)',
+
+            // }}
+            >
+              <div className=" grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
+                {/* Logo and Description */}
+
+                <di v className="col-span-2">
+                  <h2 className="text-3xl font-bold mb-4">
+                    <img
+                      src="logo.png"
+                      alt="Logo"
+                      className="w-[150px] h-auto md:w-[200px] lg:w-[250px]"
+                    />
+                  </h2>
+                  <p className="text-sm leading-relaxed pr-52">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna ultrices amet tellus ornare. Faucibus id posuere massa.
+                  </p>
+                </di>
+
+                {/* Site Map */}
+                <div>
+                  <h3 className="font-semibold text-lg mb-4">Site Map</h3>
+                  <ul className="space-y-2">
+                    <li><Link href="#" className="hover:text-blue-400">Home</Link></li>
+                    <li><Link href="#" className="hover:text-blue-400">About</Link></li>
+                    <li><Link href="#" className="hover:text-blue-400">NFT</Link></li>
+                    <li><Link href="#" className="hover:text-blue-400">Road map</Link></li>
+                    <li><Link href="#" className="hover:text-blue-400">Blog</Link></li>
+                    <li><Link href="#" className="hover:text-blue-400">Contact</Link></li>
+                  </ul>
+                </div>
+
+                {/* Company */}
+                <div>
+                  <h3 className="font-semibold text-lg mb-4">Company</h3>
+                  <ul className="space-y-2">
+                    <li><Link href="#" className="hover:text-blue-400">Help & Support</Link></li>
+                    <li><Link href="#" className="hover:text-blue-400">Terms & Conditions</Link></li>
+                    <li><Link href="#" className="hover:text-blue-400">Privacy Policy</Link></li>
+                  </ul>
+                </div>
+
+                {/* Resource */}
+                <div>
+                  <h3 className="font-semibold text-lg mb-4">Resource</h3>
+                  <ul className="space-y-2">
+                    <li><Link href="#" className="hover:text-blue-400">Partner</Link></li>
+                    <li><Link href="#" className="hover:text-blue-400">Blog</Link></li>
+                    <li><Link href="#" className="hover:text-blue-400">Newsletter</Link></li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Copyright */}
+              <div className="mt-12 text-start text-sm  border-gray-700 pt-6">
+                <p>
+                  Copyright <span className="text-blue-400">NFT core</span> 2022 All rights reserved
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </footer>
       </main>
 
 

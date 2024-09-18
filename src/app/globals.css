@@ -93,13 +93,6 @@ p {
   line-height: 25px;
 }
 
-.glassEffect {
-  background: rgba(255, 255, 255, 3%);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.068);
-  backdrop-filter: blur(10.1px);
-  -webkit-backdrop-filter: blur(10.1px);
-  border: 1px solid rgba(255, 255, 255, 0);
-}
 
 /* ScrollBar Start */
 ::-webkit-scrollbar {
@@ -112,7 +105,7 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--secondary-color);
+  background: linear-gradient(90deg, #00b5ff, #9747ff);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -272,19 +265,11 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-.polygon-border {
-  content: '';
-  position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
-  border-radius: inherit;
-  border: 4px solid transparent;
-  /* background:  padding-box, linear-gradient(45deg, #FF8A00, #E52E71) border-box; */
-  /* Adjust colors */
-  background-clip: padding-box, border-box;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 57%, 70% 100%, 0% 100%);
-  z-index: -1;
-  /* Ensure it is behind the content */
+.clip-path-border {
+  border: 2px solid transparent;
+  /* background-image: linear-gradient(#000000, #000000),
+    linear-gradient(90deg, #00b5ff, #9747ff); */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  /* clip-path: polygon(0 0, 98% 0, 100% 100%, 0% 100%); */
 }
