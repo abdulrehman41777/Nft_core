@@ -10,6 +10,8 @@ import { AiFillStar } from 'react-icons/ai'; // Example icon
 import { GiStarShuriken } from "react-icons/gi";
 import styles from "./FlipCard.module.css";
 import { HiOutlineDownload } from "react-icons/hi";
+import { FaEthereum } from "react-icons/fa";
+
 
 
 
@@ -56,32 +58,10 @@ export default function Home() {
       }
     );
   }, []);
-  // const flipBoxRef = useRef(null);
 
-  // useEffect(() => {
-  //   const flipBox = flipBoxRef.current;
-
-  //   // GSAP Flip Animation
-  //   flipBox.addEventListener('mouseenter', () => {
-  //     gsap.to(flipBox, {
-  //       rotateY: 180,
-  //       duration: 0.6,
-  //       ease: 'power3.inOut',
-  //     });
-  //   });
-
-  //   flipBox.addEventListener('mouseleave', () => {
-  //     gsap.to(flipBox, {
-  //       rotateY: 0,
-  //       duration: 0.6,
-  //       ease: 'power3.inOut',
-  //     });
-  //   });
-  // }, []);
 
   return (
     <div
-    // classNameName="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-white"
 
 
     >
@@ -332,7 +312,7 @@ export default function Home() {
 
 
       <main>
-        <section className="relative border-2 border-[red] text-white py-4 h-auto "
+        <section className="relative border-2 border-[red] text-white py-4 h--screen "
 
           style={{
             backgroundImage: "url('./2bg.png')",
@@ -352,7 +332,7 @@ export default function Home() {
           >
 
             <div className="absolute inset-0 overflow-hidden">
-              {Array.from({ length: 10 }).map((_, i) => (
+              {Array.from({ length: 15 }).map((_, i) => (
                 <div
                   key={i}
                   className="absolute flex items-center justify-center"
@@ -418,40 +398,484 @@ export default function Home() {
 
 
         </section>
-        <section>
+        <section className="relative border-2 border-[red] text-white py-4 h--screen "
+
+          style={{
+            backgroundImage: "url('./flipbg.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "right",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+
+
           <div className=" py-12 px-6">
 
-
+            <div className="absolute inset-0 overflow-hidden">
+              {Array.from({ length: 10 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute flex items-center justify-center"
+                  style={{
+                    width: '20px',
+                    height: '20px',
+                    backgroundColor: 'transparent',
+                    borderRadius: '50%',
+                    top: `${Math.random() * 100}%`,
+                    left: `${Math.random() * 100}%`,
+                    transform: 'translate(-50%, -50%)',
+                  }}
+                  ref={el => starsRef.current[i] = el}
+                >
+                  <GiStarShuriken className="text-[#98c8ff] text-3xl" />
+                </div>
+              ))}
+            </div>
             <h2 className="text-center text-white text-3xl mb-8">Live Auction</h2>
             <p className="text-center text-white mb-12">
-              The largest and unique Super rare NFT marketplace for crypto-collectibles
+              The largest and unique Super rare NFT marketplace<br /> for crypto-collectibles
             </p>
+            <div className=" flex justify-center items-center bg--gray-100 p-6 border">
+              <div className="border grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6  ">
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-              {/* Card 1 */}
-
-              {/* <div className="flex justify-center items-center min-h-screen bg-gray-100"> */}
-
-              <div className="w-64 h-64 perspective-1000" >
-                {/* Flip Box */}
-
+                {/* Card 1 */}
+                <div className="border-2 border-[red] flex justify-center items-center">
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      {/* Front Side */}
+                      <div className="border-2 border-[blue] flip-box-front h-full">
+                        <img
+                          src="flip01.png"
+                          alt="Digital Artwork"
+                          className="object-cover border-2 border-[olive] w-full h-full"
+                        />
+                      </div>
+                      {/* Back Side */}
+                      <div className="border-2 border-[orange] flip-box-back flex flex-col justify-center items-center p-4 h-full">
+                        <h2 className="text-xl font-bold">Current bid</h2>
+                        <div className="flex items-center space-x-4 mt-4">
+                          <div className="text-blue-500">
+                            <FaEthereum className="h-8 w-8 text-white" />
+                          </div>
+                          <div>
+                            <p className="text-white">3.2 ETH</p>
+                          </div>
+                        </div>
+                        <button className="hover:bg-[#080B2A] text-white px-4 py-1 rounded-full border mt-4">
+                          Music
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                {/* </div> */}
-
-
                 {/* Card 2 */}
-
+                <div className="flex justify-center items-center">
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      {/* Front Side */}
+                      <div className="flip-box-front">
+                        <img
+                          src="flip02.png"
+                          alt="Digital Artwork 2"
+                          className="h-full w-full object-cover border-2 border-[olive]"
+                        />
+                      </div>
+                      {/* Back Side */}
+                      <div className="flip-box-back flex flex-col justify-center items-center p-4">
+                        <h2 className="text-lg font-bold">Current bid</h2>
+                        <div className="flex items-center space-x-4 mt-4">
+                          <div className="text-blue-500">
+                            <FaEthereum className="h-8 w-8 text-white" />
+                          </div>
+                          <div>
+                            <p className="text-white">2.5 ETH</p>
+                          </div>
+                        </div>
+                        <button className="hover:bg-[#080B2A] text-white px-4 py-1 rounded-full border mt-4">
+                          Art
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 {/* Card 3 */}
+                <div className="flex justify-center items-center">
+                  <div className="flip-box">
+                    <div className="flip-box-inner">
+                      {/* Front Side */}
+                      <div className="flip-box-front">
+                        <img
+                          src="flip03.png"
+                          alt="Digital Artwork 3"
+                          className="h-full w-full object-cover border-2 border-[olive]"
+                        />
+                      </div>
+                      {/* Back Side */}
+                      <div className="flip-box-back flex flex-col justify-center items-center p-4">
+                        <h2 className="text-xl font-bold">Current bid</h2>
+                        <div className="flex items-center space-x-4 mt-4">
+                          <div className="text-blue-500">
+                            <FaEthereum className="h-8 w-8 text-white" />
+                          </div>
+                          <div>
+                            <p className="text-white">4.1 ETH</p>
+                          </div>
+                        </div>
+                        <button className="hover:bg-[#080B2A] text-white px-4 py-1 rounded-full border mt-4">
+                          Photography
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Card 4 */}
 
+
+              </div>
+            </div>
+
+
+          </div>
+
+        </section>
+        <section
+          className="relative border-2 border-red-500 text-white py-14 h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('./timelinebg01.png')",
+          }}
+        >
+
+          <div className="absolute inset-0 overflow-hidden">
+            {Array.from({ length: 15 }).map((_, i) => (
+              <div
+                key={i}
+                className="absolute flex items-center justify-center"
+                style={{
+                  width: '20px',
+                  height: '20px',
+                  backgroundColor: 'transparent',
+                  borderRadius: '50%',
+                  top: `${Math.random() * 100}%`,
+                  left: `${Math.random() * 100}%`,
+                  transform: 'translate(-50%, -50%)',
+                }}
+                ref={el => starsRef.current[i] = el}
+              >
+                <GiStarShuriken className="text-[#98c8ff] text-3xl" />
+              </div>
+            ))}
+          </div>
+          <h2 className="text-center text-white text-3xl mb-8">Road Map 2024</h2>
+          <p className="text-center text-white mb-12">
+            The largest and unique Super rare NFT marketplace<br /> for crypto-collectibles
+          </p>
+          <div className="container mx-auto py-12 relative w-[90%] lg:w-[80%]">
+            {/* Vertical Line in the Middle */}
+            <div className="absolute border-2 border-blue-500 h-full w-px left-1/2 transform -translate-x-1/2"></div>
+
+            {/* Right Aligned Item (Box 1) */}
+            <div className="relative w-full mb-8 flex justify-between flex-row-reverse items-center">
+              <div className="order-1 w-5/12 hidden lg:block"></div>
+              <div
+                className="order-1 w-full lg:w-5/12 p-3 bg-transparent rounded-xl my-4 mr-auto relative z-10"
+                style={{
+                  backgroundImage: "url('./Vectorbg.png')",
+                  backgroundSize: "140px",
+                  backgroundPosition: "right",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div
+                  className="border border-indigo-500/100 px-6 sm:px-10 lg:px-20 py-6 rounded-xl"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.04)',
+                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    backdropFilter: 'blur(2.4px)',
+                    WebkitBackdropFilter: 'blur(2.4px)',
+                  }}
+                >
+                  <h3 className="text-base sm:text-lg pb-2 text-gray-300 text-center font-light">January</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl text-white mb-1">Brief</h3>
+                  <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
+                </div>
+              </div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+            </div>
+
+            {/* Left Aligned Item (Box 2) */}
+            <div className="relative w-full mb-8 flex justify-between items-center">
+              <div className="order-1 w-5/12 hidden lg:block"></div>
+              <div
+                className="order-1 w-full lg:w-5/12 p-3 bg-transparent rounded-xl my-4 ml-auto relative z-10"
+                style={{
+                  backgroundImage: "url('./Vectorright.png')",
+                  backgroundSize: "140px",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div
+                  className="border border-indigo-500/100 px-6 sm:px-10 lg:px-20 py-6 rounded-xl"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.04)',
+                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    backdropFilter: 'blur(2.4px)',
+                    WebkitBackdropFilter: 'blur(2.4px)',
+                  }}
+                >
+                  <h3 className="text-base sm:text-lg pb-2 text-gray-300 text-center font-light">February</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl text-white mb-1">Brief</h3>
+                  <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
+                </div>
+              </div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+            </div>
+
+            {/* Right Aligned Item (Box 3) */}
+            <div className="relative w-full mb-8 flex justify-between flex-row-reverse items-center">
+              <div className="order-1 w-5/12 hidden lg:block"></div>
+              <div
+                className="order-1 w-full lg:w-5/12 p-3 bg-transparent rounded-xl my-4 mr-auto relative z-10"
+                style={{
+                  backgroundImage: "url('./Vectorbg.png')",
+                  backgroundSize: "140px",
+                  backgroundPosition: "right",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div
+                  className="border border-indigo-500/100 px-6 sm:px-10 lg:px-20 py-6 rounded-xl"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.04)',
+                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    backdropFilter: 'blur(2.4px)',
+                    WebkitBackdropFilter: 'blur(2.4px)',
+                  }}
+                >
+                  <h3 className="text-base sm:text-lg pb-2 text-gray-300 text-center font-light">March</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl text-white mb-1">Brief</h3>
+                  <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
+                </div>
+              </div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+            </div>
+
+            {/* Left Aligned Item (Box 4) */}
+            <div className="relative w-full mb-8 flex justify-between items-center">
+              <div className="order-1 w-5/12 hidden lg:block"></div>
+              <div
+                className="order-1 w-full lg:w-5/12 p-3 bg-transparent rounded-xl my-4 ml-auto relative z-10"
+                style={{
+                  backgroundImage: "url('./Vectorright.png')",
+                  backgroundSize: "140px",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div
+                  className="border border-indigo-500/100 px-6 sm:px-10 lg:px-20 py-6 rounded-xl"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.04)',
+                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    backdropFilter: 'blur(2.4px)',
+                    WebkitBackdropFilter: 'blur(2.4px)',
+                  }}
+                >
+                  <h3 className="text-base sm:text-lg pb-2 text-gray-300 text-center font-light">April</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl text-white mb-1">Brief</h3>
+                  <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
+                </div>
+              </div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+            </div>
+
+            {/* Right Aligned Item (Box 5) */}
+            <div className="relative w-full mb-8 flex justify-between flex-row-reverse items-center">
+              <div className="order-1 w-5/12 hidden lg:block"></div>
+              <div
+                className="order-1 w-full lg:w-5/12 p-3 bg-transparent rounded-xl my-4 mr-auto relative z-10"
+                style={{
+                  backgroundImage: "url('./Vectorbg.png')",
+                  backgroundSize: "140px",
+                  backgroundPosition: "right",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div
+                  className="border border-indigo-500/100 px-6 sm:px-10 lg:px-20 py-6 rounded-xl"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.04)',
+                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    backdropFilter: 'blur(2.4px)',
+                    WebkitBackdropFilter: 'blur(2.4px)',
+                  }}
+                >
+                  <h3 className="text-base sm:text-lg pb-2 text-gray-300 text-center font-light">May</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl text-white mb-1">Brief</h3>
+                  <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
+                </div>
+              </div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+            </div>
+
+            {/* Left Aligned Item (Box 6) */}
+            <div className="relative w-full mb-8 flex justify-between items-center">
+              <div className="order-1 w-5/12 hidden lg:block"></div>
+              <div
+                className="order-1 w-full lg:w-5/12 p-3 bg-transparent rounded-xl my-4 ml-auto relative z-10"
+                style={{
+                  backgroundImage: "url('./Vectorright.png')",
+                  backgroundSize: "140px",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat",
+                }}
+              >
+                <div
+                  className="border border-indigo-500/100 px-6 sm:px-10 lg:px-20 py-6 rounded-xl"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.04)',
+                    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    backdropFilter: 'blur(2.4px)',
+                    WebkitBackdropFilter: 'blur(2.4px)',
+                  }}
+                >
+                  <h3 className="text-base sm:text-lg pb-2 text-gray-300 text-center font-light">June</h3>
+                  <h3 className="font-semibold text-lg sm:text-xl text-white mb-1">Brief</h3>
+                  <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
+                </div>
+              </div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+            </div>
+          </div>
+
+        </section>
+        <section
+          className="relative border-2 border-red-500 text-white py-14 h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('./collectionbg.png')",
+          }}
+        >
+
+
+          <div class="max-w-7xl mx-auto p-6">
+            <h2 className="text-center text-white text-3xl mb-8">Top Collection</h2>
+            <p className="text-center text-white mb-12">
+              The largest and unique Super rare NFT marketplace<br /> for crypto-collectibles
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+              <div class="bg--[#3B82F6] hover:hover:bg-[#080B2A]   p-4 rounded-lg shadow-lg flex flex-col items-start  text-start  transition duration-300 ease-in-out border hover:text-white"
+
+              >
+                <img src="./collection01.png" alt="Art Image 1" class="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-90" />
+
+                <h3 class="text-white text-xl font-semibold text-start">Punk Art Collection</h3>
+                <p class="text-[gray-400]">Curated by <span class="underline hover:text-white ">Jenna Watson</span></p>
+              </div>
+
+              <div class="bg--[#3B82F6] hover:hover:bg-[#080B2A]   p-4 rounded-lg shadow-lg flex flex-col items-start  text-start  transition duration-300 ease-in-out border hover:text-white">
+                <img src="./collection03.png" alt="Art Image 1" class="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-90" />
+
+                <h3 class="text-white text-xl font-semibold text-start">Punk Art Collection</h3>
+                <p class="text-[gray-400]">Curated by <span class="underline hover:text-white ">Jenna Watson</span></p>
+              </div>
+              <div class="bg--[#3B82F6] hover:hover:bg-[#080B2A]   p-4 rounded-lg shadow-lg flex flex-col items-start  text-start  transition duration-300 ease-in-out border hover:text-white">
+                <img src="./collection02.png" alt="Art Image 1" class="w-full h-80 object-cover rounded-md mb-4 transition-transform duration-300 ease-in-out hover:scale-90" />
+
+                <h3 class="text-white text-xl font-semibold text-start">Punk Art Collection</h3>
+                <p class="text-[gray-400]">Curated by <span class="underline hover:text-white ">Jenna Watson</span></p>
+              </div>
+            </div>
+
+            <div class="flex justify-center mt-8">
+              <button className="hover:bg-[#15BFFD] hover:text-white text-[#15BFFD] px-10 py-3 rounded-full border border-[#15BFFD]">
+                Explore More
+              </button>
+            </div>
+          </div>
+        </section>
+        <section
+          className="relative border-2 border-red-500 text-white py-14 h-full bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('./collectionbg.png')",
+          }}
+        >
+          <div class="bg--[#0e112a]  flex justify-center items-center p-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+              {/* <div
+                className="relative border-2 border-red-400 overflow-hidden p-4 rounded-lg flex items-center polygon0--border justify-between shadow-lg hover:shadow-xl transition-shadow duration-300"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+                  backdropFilter: 'blur(2.4px)',
+                  WebkitBackdropFilter: 'blur(2.4px)',
+                  clipPath: "polygon(0% 0%, 100% 0, 100% 57%, 70% 100%, 0% 100%);",
+                  border:"polygon(0% 0%, 100% 0, 100% 57%, 70% 100%, 0% 100%);"
+                }}
+              >
+                <div className="absolute inset-0 border-4 border-transparent rounded-lg border-gradient" />
+                <div className="flex items-center space-x-4">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
+                  </div>
+                </div>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
+              </div> */}
+
+
+              <div className="relative p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="absolute inset-0 -z-10 border-4 border-transparent rounded-lg polygon-border" />
+                <div className="flex items-center space-x-4 relative">
+                  <img src="/our-creators.png" alt="Avatar" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col">
+                    <h4 className="text-white font-semibold text-lg">Emerson Phillips</h4>
+                    <div className="flex flex-row items-center gap-2">
+                      <FaEthereum className="text-[#3B82F6]" /> 3.2 ETH
+                    </div>
+                  </div>
+                </div>
+                <button className="bg-transparent underline text-blue-500 px-3 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
+                  Follow
+                </button>
               </div>
 
 
+              <div class="bg-[#1b1f3b] p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center">
+                  <img src="avatar2.jpg" alt="Avatar" class="w-12 h-12 rounded-full mr-4" />
+                  <div>
+                    <h4 class="text-white font-semibold">Emerson Phillips</h4>
+                    <p class="text-blue-300 text-sm"><i class="fa fa-ethereum"></i> 3.2 ETH</p>
+                  </div>
+                </div>
+                <button class="bg-transparent border border-blue-500 text-blue-500 px-4 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300">Follow</button>
+              </div>
+              <div class="bg-[#1b1f3b] p-4 rounded-lg flex items-center justify-between shadow-lg hover:shadow-xl transition">
+                <div class="flex items-center">
+                  <img src="avatar2.jpg" alt="Avatar" class="w-12 h-12 rounded-full mr-4" />
+                  <div>
+                    <h4 class="text-white font-semibold">Emerson Phillips</h4>
+                    <p class="text-blue-300 text-sm"><i class="fa fa-ethereum"></i> 3.2 ETH</p>
+                  </div>
+                </div>
+                <button class="bg-transparent border border-blue-500 text-blue-500 px-4 py-1 rounded-lg hover:bg-blue-500 hover:text-white transition duration-300">Follow</button>
+              </div>
+
             </div>
+          </div>
+
 
         </section>
-
       </main>
 
 

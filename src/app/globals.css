@@ -219,3 +219,72 @@ input::-webkit-inner-spin-button {
 }
 
 
+.flip-box {
+  width: 384px;
+  /* Consistent width for the box */
+  height: 460px;
+  /* Consistent height for the box */
+  perspective: 1000px;
+  /* 3D effect */
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  color: black;
+}
+
+.flip-box-back {
+  background-color: #15bffd;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.gradient-border {
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(90deg, #9C37FD, #15BFFD);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+
+.relative {
+  position: relative;
+}
+
+.polygon-border {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: inherit;
+  border: 4px solid transparent;
+  /* background:  padding-box, linear-gradient(45deg, #FF8A00, #E52E71) border-box; */
+  /* Adjust colors */
+  background-clip: padding-box, border-box;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 57%, 70% 100%, 0% 100%);
+  z-index: -1;
+  /* Ensure it is behind the content */
+}
