@@ -573,7 +573,7 @@ export default function Home() {
           </p>
           <div className="container mx-auto py-12 relative w-[90%] lg:w-[80%]">
             {/* Vertical Line in the Middle */}
-            <div className="absolute border-2 border-blue-500 h-full w-px left-1/2 transform -translate-x-1/2"></div>
+            <div className="absolute border-2 border-blue-500 h-full w-px left-1/2 transform -translate-x-1/2 max-sm:hidden max-sm:hidden"></div>
 
             {/* Right Aligned Item (Box 1) */}
             <div className="relative w-full mb-8 flex justify-between flex-row-reverse items-center">
@@ -601,12 +601,12 @@ export default function Home() {
                   <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
                 </div>
               </div>
-              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white max-sm:hidden"></div>
             </div>
 
             {/* Left Aligned Item (Box 2) */}
             <div className="relative w-full mb-8 flex justify-between items-center">
-              <div className="order-1 w-5/12 hidden lg:block"></div>
+              <div className="order-1 w-5/12 hidden lg:block "></div>
               <div
                 className="order-1 w-full lg:w-5/12 p-3 bg-transparent rounded-xl my-4 ml-auto relative z-10"
                 style={{
@@ -630,7 +630,7 @@ export default function Home() {
                   <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
                 </div>
               </div>
-              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white max-sm:hidden"></div>
             </div>
 
             {/* Right Aligned Item (Box 3) */}
@@ -659,7 +659,7 @@ export default function Home() {
                   <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
                 </div>
               </div>
-              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white max-sm:hidden"></div>
             </div>
 
             {/* Left Aligned Item (Box 4) */}
@@ -688,7 +688,7 @@ export default function Home() {
                   <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
                 </div>
               </div>
-              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white max-sm:hidden"></div>
             </div>
 
             {/* Right Aligned Item (Box 5) */}
@@ -717,7 +717,7 @@ export default function Home() {
                   <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
                 </div>
               </div>
-              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white max-sm:hidden"></div>
             </div>
 
             {/* Left Aligned Item (Box 6) */}
@@ -746,7 +746,7 @@ export default function Home() {
                   <span className="text-sm sm:text-base leading-tight text-justify text-gray-300">Lorem ipsum dolor sit amet consectetur. Elit massa erat vitae non semper quis.</span>
                 </div>
               </div>
-              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white"></div>
+              <div className="w-6 h-6 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-blue-500 border-2 border-white max-sm:hidden"></div>
             </div>
           </div>
 
@@ -1065,53 +1065,39 @@ export default function Home() {
         </section>
 
         <footer
-          className="relative border-2 border-red-500 text-white py--14 h-full bg-cover bg-center bg-no-repeat"
+          className="relative text-white py--14 h-full bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('./footerbg.png')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
-
           }}
         >
-          <div className="border-4 border-[yellow] py-20"
-
+          <div
+            className="py-10 md:py-10"
             style={{
-              background: 'rgba(255, 255, 255, 0.04 )',
+              background: 'rgba(255, 255, 255, 0.04)',
               boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
               backdropFilter: 'blur(2.4px)',
               WebkitBackdropFilter: 'blur(2.4px)',
-
             }}
           >
-            <div className="border container mx-auto px-4"
-
-            // style={{
-            //   background: 'rgba(255, 255, 255, 0.04 )',
-            //   boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
-            //   backdropFilter: 'blur(2.4px)',
-            //   WebkitBackdropFilter: 'blur(2.4px)',
-
-            // }}
-            >
-              <div className=" grid grid-cols-1 md:grid-cols-5 gap-8 text-center md:text-left">
+            <div className="container mx-auto px-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 text-center md:text-left">
                 {/* Logo and Description */}
-
-                <di v className="col-span-2">
-                  <h2 className="text-3xl font-bold mb-4">
-                    <img
-                      src="logo.png"
-                      alt="Logo"
-                      className="w-[150px] h-auto md:w-[200px] lg:w-[250px]"
-                    />
-                  </h2>
-                  <p className="text-sm leading-relaxed pr-52">
+                <div className="col-span-1 lg:col-span-2">
+                  <img
+                    src="logo.png"
+                    alt="Logo"
+                    className="w-[150px] h-auto mx-auto md:mx-0 md:w-[200px] lg:w-[250px]"
+                  />
+                  <p className="text-sm leading-relaxed mt-4 md:pr-10 lg:pr-20">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna ultrices amet tellus ornare. Faucibus id posuere massa.
                   </p>
-                </di>
+                </div>
 
                 {/* Site Map */}
-                <div>
+                <div className="md:col-span-1">
                   <h3 className="font-semibold text-lg mb-4">Site Map</h3>
                   <ul className="space-y-2">
                     <li><Link href="#" className="hover:text-blue-400">Home</Link></li>
@@ -1124,7 +1110,7 @@ export default function Home() {
                 </div>
 
                 {/* Company */}
-                <div>
+                <div className="md:col-span-1">
                   <h3 className="font-semibold text-lg mb-4">Company</h3>
                   <ul className="space-y-2">
                     <li><Link href="#" className="hover:text-blue-400">Help & Support</Link></li>
@@ -1134,7 +1120,7 @@ export default function Home() {
                 </div>
 
                 {/* Resource */}
-                <div>
+                <div className="md:col-span-1">
                   <h3 className="font-semibold text-lg mb-4">Resource</h3>
                   <ul className="space-y-2">
                     <li><Link href="#" className="hover:text-blue-400">Partner</Link></li>
@@ -1145,15 +1131,16 @@ export default function Home() {
               </div>
 
               {/* Copyright */}
-              <div className="mt-12 text-start text-sm  border-gray-700 pt-6">
+              <div className="mt-12 text-center md:text-start text-sm border-t border-gray-700 pt-6">
                 <p>
                   Copyright <span className="text-blue-400">NFT core</span> 2022 All rights reserved
                 </p>
               </div>
             </div>
           </div>
-
         </footer>
+
+
       </main>
 
 
