@@ -124,8 +124,8 @@ export default function Home() {
       ease: 'power2.out', // Easing function
     });
   }, []);
-  
- 
+
+
 
   return (
     <div
@@ -688,22 +688,22 @@ export default function Home() {
               </p>
             </motion.div>
             <div className=" flex justify-center items-center bg--gray-100 p-6 ">
-              <div className="border grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6  ">
+              <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6  ">
 
                 {/* Card 1 */}
-                <div className="border-2 border-[red] flex justify-center items-center">
+                <div className="border--2 border-[red] flex justify-center items-center">
                   <div className="flip-box">
                     <div className="flip-box-inner">
                       {/* Front Side */}
-                      <div className="border-2 border-[blue] flip-box-front h-full">
+                      <div className="border--2 border-[blue] flip-box-front h-full">
                         <img
                           src="flip01.png"
                           alt="Digital Artwork"
-                          className="object-cover border-2 border-[olive] w-full h-full"
+                          className="object-cover border--2 border-[olive] w-full h-full"
                         />
                       </div>
                       {/* Back Side */}
-                      <div className="border-2 border-[orange] flip-box-back flex flex-col justify-center items-center p-4 h-full">
+                      <div className="border--2 border-[orange] flip-box-back flex flex-col justify-center items-center p-4 h-full">
                         <h2 className="text-xl font-bold">Current bid</h2>
                         <div className="flex items-center space-x-4 mt-4">
                           <div className="text-blue-500">
@@ -730,7 +730,7 @@ export default function Home() {
                         <img
                           src="flip02.png"
                           alt="Digital Artwork 2"
-                          className="h-full w-full object-cover border-2 border-[olive]"
+                          className="h-full w-full object-cover border--2 border-[olive]"
                         />
                       </div>
                       {/* Back Side */}
@@ -761,7 +761,7 @@ export default function Home() {
                         <img
                           src="flip03.png"
                           alt="Digital Artwork 3"
-                          className="h-full w-full object-cover border-2 border-[olive]"
+                          className="h-full w-full object-cover border--2 border-[olive]"
                         />
                       </div>
                       {/* Back Side */}
@@ -793,7 +793,7 @@ export default function Home() {
 
         </section>
         <section
-          className="relative border-2 border-red-500 text-white py-14 h-full bg-cover bg-center bg-no-repeat"
+          className="relative border--2 border-red-500 text-white py-14 h-full bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('./timelinebg01.png')",
           }}
@@ -1004,7 +1004,7 @@ export default function Home() {
 
         </section>
         <section
-          className="relative border-2 border-red-500 text-white py-14 h-full bg-cover bg-center bg-no-repeat"
+          className="relative border--2 border-red-500 text-white py-14 h-full bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('./collectionbg.png')",
           }}
@@ -1050,7 +1050,7 @@ export default function Home() {
           </div>
         </section>
         <section
-          className="relative border-2 border-red-500 text-white py-14 h-full bg-cover bg-center bg-no-repeat"
+          className="relative border--2 border-red-500 text-white py-14 h-full bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage: "url('./collectionbg.png')",
           }}
